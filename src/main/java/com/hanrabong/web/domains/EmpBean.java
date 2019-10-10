@@ -11,7 +11,7 @@ public class EmpBean implements Serializable{
 	private String empNo, eName, job, mgr,
 	hireDate, sal, comm, deptNo , dName;
 	
-//dd
+
 }
 
 
