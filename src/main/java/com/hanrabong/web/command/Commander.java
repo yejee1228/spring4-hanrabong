@@ -9,7 +9,7 @@ public class Commander {
 	
 	public static Command direct(HttpServletRequest request) {
 		Command c = new Command();
-		System.out.println(request.getParameter("action>>>>>>>>>>>Command"));
+		System.out.println(request.getParameter("action>>>>>Command"));
 		switch (Action.valueOf(request
 				.getParameter("action")
 				.toUpperCase())) {
