@@ -9,25 +9,34 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.hanrabong.web.services.EmpService;
+import com.hanrabong.web.services.HCustService;
+import com.hanrabong.web.seviceImpls.HCustServiceImpl;
 
 @Controller
-@RequestMapping("/Emp/*")
-public class EmpController {
-	private static final Logger logger = LoggerFactory.getLogger(EmpController.class);
-	@Autowired EmpService empService;
+@RequestMapping("/hcust/*")
+public class HCustController {
+	private static final Logger logger = LoggerFactory.getLogger(HCustController.class);
+	@Autowired HCustServiceImpl hCustService;
 	
 	@GetMapping("/count")
 	public String count(Model model) {
-		int count = empService.countEmp();
+		int count = hCustService.countHCusts();
 		model.addAttribute("count",count);
 		return"index";
 	}
 	@GetMapping("/info")
-	public String findEmpByCId(@RequestParam("cid") String cid) {
+	public String findHCustByCId(@RequestParam("cid") String cid) {
 		return "index";
 	}
 	//develop
 	
+	
+	@GetMapping
+    public String home(Locale locale, Model model) {
+         logger.info("Welcome {}.", "HomeController");
+         
+         
+         return "home";
+    }
 	
 }

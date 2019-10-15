@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.hanrabong.web.seviceImpls.EmpServiceImpl;
+import com.hanrabong.web.seviceImpls.HCustServiceImpl;
 
 /**
  * Handles requests for the application home page.
@@ -20,17 +20,13 @@ import com.hanrabong.web.seviceImpls.EmpServiceImpl;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	@Autowired EmpServiceImpl empService;
+	@Autowired HCustServiceImpl hCustService;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@GetMapping("/")
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome  {}.", "HomeController");
-		
-		int count = empService.countEmp();
-		
-		model.addAttribute("count",count);
 		
 		return "index";
 	}

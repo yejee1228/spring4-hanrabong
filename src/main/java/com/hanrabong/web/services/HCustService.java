@@ -7,18 +7,19 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Component;
 
 import com.hanrabong.web.domains.DeptDTO;
-import com.hanrabong.web.domains.EmpDTO;
+import com.hanrabong.web.domains.HCustDTO;
 
 
 @Component
-public interface EmpService {
+public interface HCustService {
+
+	public int countHCusts();
 	
-	public EmpDTO login(EmpDTO eb);
-	public Boolean join(EmpDTO eb);
+	public HCustDTO login(HCustDTO eb);
+	public Boolean join(HCustDTO eb);
 
 	public List<DeptDTO> findDept();	
-	public List<EmpDTO> findEmps();	
-	public EmpDTO findEmp(EmpDTO eb);	
+	public List<HCustDTO> findEmps();	
+	public HCustDTO findEmp(HCustDTO eb);	
 	
-	public int countEmp();
 }

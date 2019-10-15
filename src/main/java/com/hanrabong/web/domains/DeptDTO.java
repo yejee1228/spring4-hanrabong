@@ -11,7 +11,7 @@ import lombok.Data;
 public class DeptDTO implements Serializable{
 	private static final long serialVersionUID= 1L;
 	
-	private String deptNo, dName, loc;
+	private String anum, aid, apw, aname, authority, part;
 	
 	
 }
