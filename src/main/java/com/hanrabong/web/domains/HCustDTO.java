@@ -1,9 +1,7 @@
 package com.hanrabong.web.domains;
 
 import java.io.Serializable;
-
 import org.springframework.stereotype.Component;
-
 import lombok.Data;
 
 @Data @Component
@@ -12,6 +10,22 @@ public class HCustDTO implements Serializable{
 
 	@SuppressWarnings("unused")
 	private String cnum, cid, cpw, cname, gen, birth, skinProb, skinType, child, addr, tel, cpoint;
+
+	public String getCid() {
+		return cid;
+	}
+
+	public void setCid(String cid) {
+		this.cid = cid;
+	}
+
+	public String getCpw() {
+		return cpw;
+	}
+
+	public void setCpw(String cpw) {
+		this.cpw = cpw;
+	}
 	
 
 }
