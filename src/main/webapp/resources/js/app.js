@@ -24,5 +24,5 @@ app = (()=>{
 			alert(WHEN_ERR)}
 		)
 	}
-	return{run:run}
+	return{run}
 })();

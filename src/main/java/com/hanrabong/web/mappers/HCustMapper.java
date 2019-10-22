@@ -11,9 +11,10 @@ import com.hanrabong.web.domains.HCustDTO;
 public interface HCustMapper {
     public int countHCusts();
 
-	public HCustDTO login(HCustDTO eb);
-	public Boolean insetEmp(HCustDTO eb);
-
+    public Boolean insertCust(HCustDTO eb);
+	public HCustDTO selectCnumByCid(HCustDTO eb);
+	public HCustDTO selectCustByCid(HCustDTO eb);
+	
 	public List<DeptDTO> selectDept();	
 	public List<HCustDTO> selectEmps();	
 	public HCustDTO selectEmp(HCustDTO eb);	

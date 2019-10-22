@@ -8,25 +8,8 @@ import lombok.Data;
 public class HCustDTO implements Serializable{
 	private static final long serialVersionUID= 1L;
 
-	@SuppressWarnings("unused")
 	private String cnum, cid, cpw, cname, gen, birth, skinProb, skinType, child, addr, tel, cpoint;
 
-	public String getCid() {
-		return cid;
-	}
-
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
-
-	public String getCpw() {
-		return cpw;
-	}
-
-	public void setCpw(String cpw) {
-		this.cpw = cpw;
-	}
-	
 
 }
 

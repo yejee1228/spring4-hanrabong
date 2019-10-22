@@ -15,8 +15,9 @@ public interface HCustService {
 
 	public int countHCusts();
 	
-	public HCustDTO login(HCustDTO eb);
-	public Boolean join(HCustDTO eb);
+	public HCustDTO login(HCustDTO param);
+	public Boolean joinid(HCustDTO param);
+	public Boolean join(HCustDTO param);
 
 	public List<DeptDTO> findDept();	
 	public List<HCustDTO> findEmps();	
